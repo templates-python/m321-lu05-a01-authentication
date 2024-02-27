@@ -1,0 +1,17 @@
+[
+  {
+    "username": "hans@abc.xy",
+    "password": "addb0f5e7826c857d7376d1bd9bc33c0c544790a2eac96144a8af22b1298c940",
+    "role": "customer"
+  },
+  {
+    "username": "andrea@abc.xy",
+    "password": "d14769b181706206c248aadd1c01dbf37568572f9a702a6a92bc2d8d9573a9a5",
+    "role": "employee"
+  },
+  {
+    "username": "beatrice@abc.xy",
+    "password": "33c5ebbb01d608c254b3b12413bdb03e46c12797e591770ccf20f5e2819929b2",
+    "role": "admin"
+  }
+]

@@ -6,8 +6,9 @@ from resource.auth_resource import AuthResource
 
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='static', static_url_path='')
     CORS(app)
+    app.config.from_pyfile('./.env')
     api = Api(app)
 
     api.add_resource(AuthResource, '/login')

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Token Experiment</title>
+  <script src="./index.js"></script>
+</head>
+<body>
+<h2>LU05: Authentifizieren</h2>
+<form id="login">
+  <table>
+    <tr>
+      <td>
+        <label for="username">Benutzername</label>
+      </td>
+      <td>
+        <input id="username" name="username" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="password">Passwort</label>
+      </td>
+      <td>
+        <input id="password" name="password" type="password"/>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="submit" id="submit">Anmelden</button>
+      </td>
+    </tr>
+  </table>
+</form>
+<h3>Antwort des Servers</h3>
+<div id="response"></div>
+
+<h2>LU06: Autorisation</h2>
+<button type="button" id="btn_get">GET data</button>
+<button type="button" id="btn_post">POST data</button>
+<button type="button" id="btn_delete">DELETE data</button>
+<h3>Antwort des Servers</h3>
+<div id="response2"></div>
+</body>
+</html>
