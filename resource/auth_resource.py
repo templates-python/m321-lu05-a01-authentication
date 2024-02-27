@@ -1,9 +1,7 @@
 import json
-from datetime import datetime, timedelta
 
-import jwt
 from Crypto.Hash import SHA256
-from flask import make_response, current_app
+from flask import make_response
 from flask_restful import Resource, reqparse
 
 from model.user import User
@@ -16,14 +14,6 @@ class AuthResource(Resource):
         self.parser.add_argument('password', location='form', default=None, help='password')
 
     def post(self):
-        args = self.parser.parse_args()
-        user = self._get_user_by_username(args.username)
-        if user is not None:
-            hash = self._password_hash(args.password)
-            if user.password == hash:
-                token = self._make_token(user)
-                return make_response(token, 200)
-
         return make_response('', 401)
 
     def _get_user_by_username(self, username):
@@ -60,11 +50,5 @@ class AuthResource(Resource):
         :param user:
         :return:
         """
-        access = jwt.encode({
-            'username': user.username,
-            'userrole': user.role,
-            'exp': datetime.utcnow() + timedelta(minutes=current_app.config['TOKEN_DURATION'])
-        },
-            current_app.config['ACCESS_TOKEN_KEY']
-        )
+        access = None
         return access
